@@ -22,7 +22,7 @@ public abstract class Tile {
         return ImmutableMap.copyOf(emptyTileMap); //guava ImmutableMap map
     }
 
-    public static Tile createTIle(final int tileCoordinate, final Piece piece) {
+    public static Tile createTile(final int tileCoordinate, final Piece piece) {
         return piece != null ? new OccupiedTile(tileCoordinate,piece) : EMPTY_TILES_CACHE.get(tileCoordinate);
     }
 
